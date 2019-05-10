@@ -1,12 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+
 <head>
+    <title> Area of Growth</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <!-- <script src="assets/javascript/app.js"></script> -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
 </head>
+
 <body>
+
+<!--Jumbotron-->
+<div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4"> Area of Growth</h1>
+          <p class="lead"></p>
+        </div>
+      </div>
+
+<!--Nav Bar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
+
+    <br>
+<!--Card Containter-->
+    <div class="container" id="containerCards">
+<!--Row1-->
+        <div class="row" id="row1">
+<!--Column 1-->
+<!--1st Option-->
+            <div class="col-sm-6" id="row1Col1">
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Effects</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Enter the Effects Desired:</h5>
+<!--1st Option Entry "Form"-->
+                        <form>
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput">Mulitple effects allowed</label>
+                                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                </div>
+                        </form>
+                        <p class="card-text">Option 1 Results Populate Here</p>
+                    </div>
+                </div>
+            </div>
+
+
+<!--Column 2-->
+<!--2nd Option-->
+        <div class="col-sm-6" id="row1Col2">
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Option #2</div>
+                <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <!--2nd Option Entry "Form"-->
+                    <form>
+                            <div class="form-group">
+                              <label for="formGroupExampleInput">Option #2</label>
+                              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                            </div>
+                    </form>
+                    <p class="card-text">Option 2 Results Populate Here</p>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    </div>
+
+ 
+
+
+    <script src="assets/javascript/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
     
+
+
+
 </body>
+
 </html>
