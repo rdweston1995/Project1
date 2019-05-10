@@ -11,18 +11,19 @@
     <meta charset="UTF-8">
 </head>
 
-<body>
+<body style="background-color:black">
 
+<!--Container1-->
+<div class="container1">
 <!--Jumbotron-->
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid" id="title" style="margin-bottom:0rem; background-color:black">
         <div class="container">
-          <h1 class="display-4"> Area of Growth</h1>
+          <h1 class="display-4"></h1>
           <p class="lead"></p>
         </div>
       </div>
-
 <!--Nav Bar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -51,41 +52,45 @@
                   </ul>
                 </div>
             </nav>
-
+    </div>
+<!--break-->
     <br>
-<!--Card Containter-->
-    <div class="container" id="containerCards">
+
+<!--Card Containter2-->
+    <div class="container2" id="containerCards">
 <!--Row1-->
         <div class="row" id="row1">
 <!--Column 1-->
 <!--1st Option-->
-            <div class="col-sm-6" id="row1Col1">
-                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Effects</div>
+            <div class="col-sm-12" id="row1Col1">
+                <div class="card text-white bg-primary mb-3" style="max-width: 100%;">
+                    <div class="card-header" style="color:black; font-weight: bold">Effects</div>
                     <div class="card-body">
-                        <h5 class="card-title">Enter the Effects Desired:</h5>
+                        <h5 class="card-title" style="color:black; font-weight: bold">Enter the Effects Desired:</h5>
 <!--1st Option Entry "Form"-->
                         <form>
-                                <div class="form-group">
+                                <div class="form-group" style="color:black; font-weight: bold">
                                   <label for="formGroupExampleInput">Mulitple effects allowed</label>
-                                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold" placeholder="Example input">
                                 </div>
                         </form>
+                        <a href="#" class="btn btn-dark">Effects Info</a>
                         <p class="card-text">Option 1 Results Populate Here</p>
                     </div>
                 </div>
             </div>
 
 
-<!--Column 2-->
+
+<!-- Column 2 -->
 <!--2nd Option-->
-        <div class="col-sm-6" id="row1Col2">
+        <!-- <div class="col-sm-6" id="row1Col2">
             <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
                 <div class="card-header">Option #2</div>
                 <div class="card-body">
-                    <h5 class="card-title">Dark card title</h5>
+                    <h5 class="card-title">Dark card title</h5> -->
                     <!--2nd Option Entry "Form"-->
-                    <form>
+                    <!-- <form>
                             <div class="form-group">
                               <label for="formGroupExampleInput">Option #2</label>
                               <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
@@ -95,7 +100,7 @@
                 </div>
             </div>
         
-        </div>
+        </div> -->
     </div>
     </div>
 

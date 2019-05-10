@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+
+#title {
+    background-image: url(..//image/Title.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.jumbotron {
+    background-color: black;
+}
