@@ -16,12 +16,6 @@ $(document).ready(function(){
     firebase.initializeApp(config);
     var database = firebase.database();
 
-    var test = {
-        test: "test"
-    };
-    
-    database.ref().push(test);
-
     var apiKey = "CHAdUYO"
     
     var nameArr = [];
@@ -65,6 +59,11 @@ $(document).ready(function(){
                 if(nameArr.indexOf(flavorNameArr[i]) !== -1){
                     //console.log(flavorNameArr[i]);
                     console.log(response[flavorNameArr[i]]);
+                    database.ref().push(response[flavorNameArr[i]]);
+                    $(".main").append("<div class='card text-dark card bg-light mb-3><div class'card-body'><h3>" +
+                    flavorNameArr[i] + "</h3><p>" + response[flavorNameArr[i]].race + "</p><p>Available Flavors</p><p>" +
+                    response[flavorNameArr[i]].flavors[0] + ", " + response[flavorNameArr[i]].flavors[1] + ", " + response[flavorNameArr[i]].flavors[2] + 
+                    "</p></div></div>");
                 }
             }
         });  
