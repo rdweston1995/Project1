@@ -3,12 +3,44 @@ body {
 }
 
 #title {
-    background-image: url(..//image/Title.png);
-    background-position: top;
+    background-image: url(..//image/cooltext323903962671613.png), url(..//image/tumblr_mrjgort4sR1sc50pho1_500.gif), url(..//image/weed-leaf-wallpapers-9.jpg);
+    background-position: top, left, top;
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 50%,15%, 100%;
 }
 
 .jumbotron {
     background-color: black;
 }
+
+.sidenav {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.sidenav a {
+    font-size: 20px;
+    color: #2196F3;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #064579;
+}
+
+.main {
+    font-size: 20px;
+    margin: 10px 10px 10px 210px;
+
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
