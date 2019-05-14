@@ -1,135 +1,137 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <meta charset="UTF-8">
-            <title> AOG-MAPS</title>
-            <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-            <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <!-- <script src="assets/javascript/app.js"></script> -->
-        </head>
+    <head>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta charset="UTF-8">
+      <title> Area of Growth</title>
+      <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- <script src="assets/javascript/app.js"></script> -->
+    </head>
 
 <body style="background-color:black">
 
-        <!--Container1-->
-        <div class="container1">
-        <!--Jumbotron-->
-        <div class="jumbotron jumbotron-fluid" id="title" style="margin-bottom:0rem; background-color:black">
-                <div class="container">
-                  <h1 class="display-4"></h1>
-                  <p class="lead"></p>
-                </div>
-              </div>
-        <!--Nav Bar-->
-                <nav class="navbar navbar-dark bg-dark justify-content-between">
-        <!-- Brand -->
-              <a class="navbar-brand" href="#">
-                <img src="..//Project1/assets/image/weedleafSmall.png" width="30" height="30" class="d-inline-block align-top" alt="">
-              </a>
-        <!--Beginning of Nav Search-->
-              <nav class="navbar navbar-expand-right bg-dark navbar-dark" id="searchBar">
-                  <form class="form-inline" action="#/action_page.php">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
-              </nav>
-        <!--End of Nav Search-->
-        <!--Drop Down Button Starts-->
-              <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                      <i class="fa fa-bars"></i>
-                    </button>
-                      <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="#">Strains, Effects, & Flavors</a></li>
-                        <li><a href="#">Medical Information</a></li>
-                        <li><a href="/maps.html">Location & Reviews</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Contact Us</a></li>
-                      </ul>
-              </div>
-        <!--drop Down Button Ends-->
-            </div>
-        <!--End of Nav Bar-->
-        
-
-<!--Card Containter2-->
-    <div class="container2" id="containerCards">
-                <!--Side Nav Bar-->
-                <div class="sidenav">
-                    <!-- <a href="#Strains">Types of Strains</a> -->
-                    <form>
-                        <div class="form-group" style="color:black; font-weight: bold">
-                          <label for="formGroupExampleInput">Type of Strians</label>
-                          <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold" placeholder="Enter Strain">
-                        </div>
-                    </form>
-                    <!-- <a href="#Effects">Desired Effects</a> -->
-                    <form>
-                    <div class="form-group" style="color:black; font-weight: bold">
-                        <label for="formGroupExampleInput">Type of Effects</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold" placeholder="Enter Desired Effects">
-                    </div>
-                    </form>
-                    <!-- <a href="#Flavors">Types of Flavors</a> -->
-                    <form>
-                        <div class="form-group" style="color:black; font-weight: bold">
-                            <label for="formGroupExampleInput">Different Flavors</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold" placeholder="Enter Desired Flavor">
-                        </div>
-                        <br>
-                        <br>
-                        <br>
-                    </form>
-                    <a href="#Medical">Medical Info</a>
-                    <a href="/maps.html">Store Locations & Info</a>
-                    <a href="#Yelp">Store Reviews</a>
-                  </div>
-
-    </div>
-
-      <div class="main">
-        <!--Respones for Search Criteria-->
-        <!-- <div class="col-sm-auto" id="strainInfo"> -->
-        <div class="card text-dark card bg-light mb-3" style="max-width: 100%;">
-          <div class="card-body">
-            <h5 class="card-title" style="color:black; font-weight: bold">Strains that Meet Your Criteria</h5>
-            <p class="card-text">Option 1 Results Populate Here</p>
-          </div>
-        </div>
-      
-        <!--1st Option-->
-        <!-- <div class="col-sm-auto" id="strainInfo"> -->
-        <div class="card text-dark card bg-light mb-3" style="max-width: 100%;">
-          <div class="card-body">
-            <h5 class="card-title" style="color:black; font-weight: bold">Strains that Meet Your Criteria</h5>
-            <p class="card-text">Option 1 Results Populate Here</p>
-          </div>
+<!--Container1 Starts Here-->
+    <div class="container1">
+<!--Jumbotron Starts Here-->
+      <div class="jumbotron jumbotron-fluid" id="title" style="margin-bottom:0rem; background-color:black">
+        <div class="container">
+          <h1 class="display-4"></h1>
+          <p class="lead"></p>
         </div>
       </div>
+<!--Jumbotron Ends Here-->
+<!--NavBar Starts Here-->
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
+<!-- Brand -->
+      <a class="navbar-brand" href="#">
+        <img src="..//Project1/assets/image/weedleafSmall.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      </a>
+<!--Search Starts Here-->
+          <form class="form-inline" action="#/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+<!--Search Ends Here-->
+<!--Drop Down Button Starts-->
+      <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              <i class="fa fa-bars"></i>
+            </button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#">Strains, Effects, & Flavors</a></li>
+                <li><a href="/medical.html">Medical Information</a></li>
+                <li><a href="/maps.html">Location & Reviews</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+      </div>
+<!--drop Down Button Ends-->
+        </nav>
+<!--End of Nav Bar-->
+      </div>
+<!--Container1 Ends Here-->
 
 
 
+<!--Card Containter2 Starts Here-->
+    <div class="container2" id="containerCards">
+<!--Side Nav Bar Starts Here-->
+        <div class="sidenav">
+<!-- <a href="#Strains">Types of Strains</a> -->
+              <form>
+                <div class="form-group" style="color:black; font-weight: bold">
+                  <label for="formGroupExampleInput">Type of Strians</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
+                    placeholder="Enter Strain">
+                </div>
+              </form>
+<!-- <a href="#Effects">Desired Effects</a> -->
+              <form>
+                <div class="form-group" style="color:black; font-weight: bold">
+                  <label for="formGroupExampleInput">Type of Effects</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
+                    placeholder="Enter Desired Effects">
+                </div>
+              </form>
+<!-- <a href="#Flavors">Types of Flavors</a> -->
+              <form>
+                <div class="form-group" style="color:black; font-weight: bold">
+                  <label for="formGroupExampleInput">Different Flavors</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
+                    placeholder="Enter Desired Flavor">
+                </div>
+                <br>
+                <br>
+                <br>
+              </form>
+              <a href="/medical.html">Medical Info</a>
+              <a href="/maps.html">Store Locations & Info</a>
+      </div>
+<!--Side Nav Bar Ends Here-->        
 
+<!--Main Page Info Starts Here-->   
+    <div class="main">
+<!--Respone for Map Info Start Here-->
+        <!-- <div class="col-sm-auto" id="strainInfo"> -->
+          <div class="card text-dark card bg-light mb-3" style="max-width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title" style="color:black; font-weight: bold">Strains that Meet Your Criteria</h5>
+              <p class="card-text">Maps Here</p>
+                <!-- Map appears here -->
+                <div id="map"></div>
+            </div>
+          </div>
+<!--Respone for Map Info Ends Here-->
+  </div>
+<!--Card Containter2 End Here-->
+
+
+<!--Nav Bar Bottom Starts Here-->
     <nav class="navbar fixed-bottom navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Contact Us</a>
     </nav>
+<!--Nav Bar Bottom Ends Here-->
 
  
 
         <!-- Optional JavaScript -->
+    <!--JavaScript Link-->
+    <script src="assets/javascript/maps.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js key=AIzaSyC5n0NTpCtKxrq_LsWSmOxbjtR1PjwSWHY&callback=initMap"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!--JavaScript Link-->
-    <script src="assets/javascript/maps.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  -->
+    <!-- <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyC5n0NTpCtKxrq_LsWSmOxbjtR1PjwSWHY&libraries=places&callback=initMap">
+    </script> -->
     
 
 
