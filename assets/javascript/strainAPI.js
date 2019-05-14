@@ -1,3 +1,6 @@
+//<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+//<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+//<script src="assets/javascript/strainAPI.js"></script>
 $(document).ready(function(){
     // Your web app's Firebase configuration
     var config = {
@@ -13,75 +16,56 @@ $(document).ready(function(){
     firebase.initializeApp(config);
     var database = firebase.database();
 
-    var test = {
-        test: "test"
-    };
-    
-    database.ref().push(test);
-
     var apiKey = "CHAdUYO"
     
-    var positive = [];
-    var negative = [];
-    var medical = [];
-    var flavors = [];
-    
-    $.ajax({
-        url: "http://strainapi.evanbusse.com/" + apiKey + "/searchdata/effects",
-        method: 'GET'
-    }).then(function(response){
-        console.log(response);
-        for(var i = 0; i < response.length; i++){
-            if(response[i].type === "positive"){
-                positive.push(response[i]);
-                
-            }else if(response[i].type === "negative"){
-                negative.push(response[i]);
-            }else if(response[i].type === "medical"){
-                medical.push(response[i]);
+    var nameArr = [];
+    var flavorNameArr = [];
+    var idArr = [];
+
+
+    $("#submit").on('click', function(){
+        var strain = $(".typeStrains").val().trim();
+        var effect = $(".typeEffects").val().trim();
+        var flavor = $(".typeFlavor").val().trim();
+
+        $.ajax({
+            url: "http://strainapi.evanbusse.com/" + apiKey + "/strains/search/effect/" + effect,
+            method: 'GET'
+        }).then(function(response){
+            for(var i = 0; i < response.length; i++){
+                if(response[i].race === strain.toLowerCase()){
+                    nameArr.push(response[i].name);
+                    idArr.push(response[i].id);
+                }
             }
-        }
+            $.ajax({
+                url: "http://strainapi.evanbusse.com/" + apiKey + "/strains/search/flavor/" + flavor,
+                method:'GET'
+            }).then(function(response){
+                for(var i = 0; i < response.length; i++){
+                    flavorNameArr.push(response[i].name);
+                }
+                getMatches(flavor);
+            });
+        });     
     });
 
-    $.ajax({
-        url: "http://strainapi.evanbusse.com/" + apiKey + "/searchdata/flavors",
-        method: 'GET'
-    }).then(function(response){
-        //console.log(reponse);
-        for(var i = 0; i < response.length; i++){
-            flavors.push(response[i]);
-        }
-    });
-
-    var effects = {
-        'positive': positive,
-        'negative': negative,
-        'medical': medical,
-        'flavors': flavors,
+    function getMatches(flavor){
+        $.ajax({
+            url: "http://strainapi.evanbusse.com/" + apiKey + "/strains/search/all",
+            method: 'GET'
+        }).then(function(response){
+            for(var i = 0; i < flavorNameArr.length; i++){
+                if(nameArr.indexOf(flavorNameArr[i]) !== -1){
+                    //console.log(flavorNameArr[i]);
+                    console.log(response[flavorNameArr[i]]);
+                    database.ref().push(response[flavorNameArr[i]]);
+                    $(".main").append("<div class='card text-dark card bg-light mb-3><div class'card-body'><h3>" +
+                    flavorNameArr[i] + "</h3><p>" + response[flavorNameArr[i]].race + "</p><p>Available Flavors</p><p>" +
+                    response[flavorNameArr[i]].flavors[0] + ", " + response[flavorNameArr[i]].flavors[1] + ", " + response[flavorNameArr[i]].flavors[2] + 
+                    "</p></div></div>");
+                }
+            }
+        });  
     }
-    var Positive ={};
-
-    //for(var i = 0; i < positive.length; i++){
-        //Positive.i.effect = positive[i].effect;
-        //Positive.i.type = positive[i].type;
-        //Positive.push(positive[i]);
-        //console.log(positive[i]);
-    //}
-
-    //console.log(Positive);
-    
-    //console.log(effects);
-    //console.log("-------------");
-    //database.ref().push(effects);
-
-
-    console.log(positive);
-    console.log(positive[0]);
-    console.log("--------------");
-    //console.log(negative);
-    //console.log("--------------");
-    //console.log(medical);
-    //console.log("--------------");
-    //console.log(flavors);
-    
 });
