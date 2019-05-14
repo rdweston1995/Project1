@@ -59,10 +59,24 @@ $(document).ready(function(){
                 if(nameArr.indexOf(flavorNameArr[i]) !== -1){
                     //console.log(flavorNameArr[i]);
                     console.log(response[flavorNameArr[i]]);
+                    var positives = [];
+                    var negative = [];
+                    var medical = [];
+                    for(var k = 0; k < response[flavorNameArr[i]].effects.positive.length; k++){
+                        positives.push(" " + response[flavorNameArr[i]].effects.positive[k]);
+                    }
+                    for( var n = 0; n < response[flavorNameArr[i]].effects.negative.length; n++){
+                        negative.push(" " + response[flavorNameArr[i]].effects.negative[n]);
+                    }
+                    for( var m = 0; m < response[flavorNameArr[i]].effects.medical.length; m++){
+                        medical.push(" " + response[flavorNameArr[i]].effects.medical[m]);
+                    }
+
                     database.ref().push(response[flavorNameArr[i]]);
-                    $(".main").append("<div class='card text-dark card bg-light mb-3><div class'card-body'><h3>" +
-                    flavorNameArr[i] + "</h3><p>" + response[flavorNameArr[i]].race + "</p><p>Available Flavors</p><p>" +
-                    response[flavorNameArr[i]].flavors[0] + ", " + response[flavorNameArr[i]].flavors[1] + ", " + response[flavorNameArr[i]].flavors[2] + 
+                    $(".main").append("<div class='card card strainAPI><div class'card-body'><h3>" +
+                    flavorNameArr[i] + "</h3><p>" + response[flavorNameArr[i]].race + "</p><p>Positives: " + positives + "</p><p>Medical:" + medical +
+                    "</p><p>Negative: " + negative + "</p><p>Available Flavors: " + response[flavorNameArr[i]].flavors[0] + 
+                    ", " + response[flavorNameArr[i]].flavors[1] + ", " + response[flavorNameArr[i]].flavors[2] + 
                     "</p></div></div>");
                 }
             }
