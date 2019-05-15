@@ -49,3 +49,9 @@ body {
     .sidenav a {font-size: 18px;}
   }
 
+  /* Maps Page CSS */
+  #map {
+    height: 100%;
+    background-color: grey;
+}
+
