@@ -6,11 +6,11 @@
       <meta charset="UTF-8">
       <title> Area of Growth</title>
       <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
       <!-- <script src="assets/javascript/app.js"></script> -->
     </head>
 
@@ -66,7 +66,7 @@
               <form>
                 <div class="form-group" style="color:black; font-weight: bold">
                   <label for="formGroupExampleInput">Type of Strians</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
+                  <input type="text" class="form-control typeStrains" id="formGroupExampleInput" style="color:black; font-weight: bold"
                     placeholder="Enter Strain">
                 </div>
               </form>
@@ -74,7 +74,7 @@
               <form>
                 <div class="form-group" style="color:black; font-weight: bold">
                   <label for="formGroupExampleInput">Type of Effects</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
+                  <input type="text" class="form-control typeEffects" id="formGroupExampleInput" style="color:black; font-weight: bold"
                     placeholder="Enter Desired Effects">
                 </div>
               </form>
@@ -82,9 +82,10 @@
               <form>
                 <div class="form-group" style="color:black; font-weight: bold">
                   <label for="formGroupExampleInput">Different Flavors</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
+                  <input type="text" class="form-control typeFlavor" id="formGroupExampleInput" style="color:black; font-weight: bold"
                     placeholder="Enter Desired Flavor">
                 </div>
+                <button class="btn btn-success my-2 my-sm-0 submit" type="button">Search</button>
                 <br>
                 <br>
                 <br>
@@ -102,18 +103,22 @@
           <div class="card text-dark card bg-light mb-3" style="max-width: 100%;">
             <div class="card-body">
               <h5 class="card-title" style="color:black; font-weight: bold">Strains that Meet Your Criteria</h5>
-              <p class="card-text">Option 1 Results Populate Here</p>
+              <button class="btn btn-success my-2 my-sm-0 clear">Clear Results</button>  
             </div>
           </div>
+
+          <div class="strains"></div>
 <!--Respones for Search Criteria Ends Here-->      
 <!--Respone for Map Info Start Here-->
         <!-- <div class="col-sm-auto" id="strainInfo"> -->
+          <!-- Duplicate
           <div class="card text-dark card bg-light mb-3" style="max-width: 100%;">
             <div class="card-body">
               <h5 class="card-title" style="color:black; font-weight: bold">Strains that Meet Your Criteria</h5>
               <p class="card-text">Option 1 Results Populate Here</p>
             </div>
           </div>
+        -->
     </div>
 <!--Respone for Map Info Ends Here-->
   </div>
@@ -130,8 +135,11 @@
 
         <!-- Optional JavaScript -->
     <!--JavaScript Link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/strainAPI.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
     
 
 

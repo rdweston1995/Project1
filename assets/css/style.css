@@ -40,8 +40,8 @@ body {
 
 }
 
-.strainAPI{
-    margin-bottom: 10px;
+.clear{
+    float:right;
 }
 
 @media screen and (max-height: 450px) {

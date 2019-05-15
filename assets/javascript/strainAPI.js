@@ -2,20 +2,6 @@
 //<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
 //<script src="assets/javascript/strainAPI.js"></script>
 $(document).ready(function(){
-    // Your web app's Firebase configuration
-    var config = {
-        apiKey: "AIzaSyBxnk9J_qG6F1oFANgqZ9DOB5QIQKpaDJE",
-        authDomain: "project1-dcb00.firebaseapp.com",
-        databaseURL: "https://project1-dcb00.firebaseio.com",
-        projectId: "project1-dcb00",
-        storageBucket: "project1-dcb00.appspot.com",
-        messagingSenderId: "929934289487",
-        appId: "1:929934289487:web:05e9caf4560b0be2"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(config);
-    var database = firebase.database();
-
     var apiKey = "CHAdUYO"
     
     var nameArr = [];
@@ -23,10 +9,14 @@ $(document).ready(function(){
     var idArr = [];
 
 
-    $("#submit").on('click', function(){
+    $(".submit").on('click', function(){
         var strain = $(".typeStrains").val().trim();
         var effect = $(".typeEffects").val().trim();
         var flavor = $(".typeFlavor").val().trim();
+
+        $(".typeStrains").val("");
+        $(".typeEffects").val("");
+        $(".typeFlavor").val("");
 
         $.ajax({
             url: "http://strainapi.evanbusse.com/" + apiKey + "/strains/search/effect/" + effect,
@@ -48,6 +38,10 @@ $(document).ready(function(){
                 getMatches(flavor);
             });
         });     
+    });
+
+    $(".clear").on('click', function(){
+        $(".strains").empty();
     });
 
     function getMatches(flavor){
@@ -72,14 +66,17 @@ $(document).ready(function(){
                         medical.push(" " + response[flavorNameArr[i]].effects.medical[m]);
                     }
 
-                    database.ref().push(response[flavorNameArr[i]]);
-                    $(".main").append("<div class='card card strainAPI><div class'card-body'><h3>" +
+                    $(".strains").append("<div class='card card strainAPI><div class'card-body'><h3>" +
                     flavorNameArr[i] + "</h3><p>" + response[flavorNameArr[i]].race + "</p><p>Positives: " + positives + "</p><p>Medical:" + medical +
                     "</p><p>Negative: " + negative + "</p><p>Available Flavors: " + response[flavorNameArr[i]].flavors[0] + 
                     ", " + response[flavorNameArr[i]].flavors[1] + ", " + response[flavorNameArr[i]].flavors[2] + 
-                    "</p></div></div>");
+                    "</p><button class='btn btn-success my-2 my-sm-0 favorite'>Favorite</button></div></div>");
                 }
             }
+
+            $(".favorite").on('click', function(respose){
+                console.log("test");
+            })
         });  
     }
 });
