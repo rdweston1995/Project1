@@ -2,6 +2,19 @@
 //<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
 //<script src="assets/javascript/strainAPI.js"></script>
 $(document).ready(function(){
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBxnk9J_qG6F1oFANgqZ9DOB5QIQKpaDJE",
+        authDomain: "project1-dcb00.firebaseapp.com",
+        databaseURL: "https://project1-dcb00.firebaseio.com",
+        projectId: "project1-dcb00",
+        storageBucket: "project1-dcb00.appspot.com",
+        messagingSenderId: "929934289487",
+        appId: "1:929934289487:web:05e9caf4560b0be2"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
     var apiKey = "CHAdUYO"
     
     var nameArr = [];
