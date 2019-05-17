@@ -16,6 +16,19 @@ var ui = new firebaseui.auth.AuthUI(firebase.auth());
 var uiConfig = {
     callbacks: {
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+        var user = firebase.auth().currentUser;
+        var name, email, photoUrl, uid, emailVerified;
+
+        if (user != null) {
+          //name = user.displayName;
+          email = user.email;
+          //photoUrl = user.photoURL;
+          //emailVerified = user.emailVerified;
+          uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
+                           // this value to authenticate with your backend server, if
+                           // you have one. Use User.getToken() instead.
+        }
+        
         // User successfully signed in.
         // Return type determines whether we continue the redirect automatically
         // or whether we leave that to developer to handle.
@@ -29,7 +42,7 @@ var uiConfig = {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: 'index.html',
+    signInSuccessUrl: 'main.html',
     signInOptions: [
       // Leave the lines as is for the providers you want to offer your users.
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
