@@ -1,0 +1,112 @@
+/* body {
+    background-color: palevioletred;
+} */
+
+#title {
+    background-image: url(..//image/cooltext323903962671613.png), url(..//image/tumblr_mrjgort4sR1sc50pho1_500.gif), url(..//image/weed-leaf-wallpapers-9.jpg);
+    background-position: top, left, top;
+    background-repeat: no-repeat;
+    background-size: 50%,15%, 100%;
+}
+
+.jumbotron {
+    background-color: black;
+}
+
+.sidenav {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.sidenav a {
+    font-size: 20px;
+    color: #2196F3;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #064579;
+}
+
+.main {
+    font-size: 20px;
+    margin: 10px 10px 10px 210px;
+    width: 89%;
+
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+#map {
+    background-color: grey;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+}
+/* 
+#panel {
+    height: 100%;
+    width: null;
+    background-color: white;
+    position: static;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: all .2s ease-out;
+  }
+  .open {
+    width: 250px;
+  }
+  /* Styling for place details */
+  .hero {
+    width: 100%;
+    height: auto;
+    max-height: 166px;
+    display: block;
+  }
+  .place {
+    font-family: 'open sans', arial, sans-serif;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .details {
+    color: darkslategrey;
+    text-align: center;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: center;
+
+  }
+  a {
+    text-decoration: none;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: center;
+    color: cadetblue;
+  } */
+
+  h1, h1 {
+    font-size: 1.5rem;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: center;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+
+

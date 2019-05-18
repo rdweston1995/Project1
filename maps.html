@@ -2,19 +2,19 @@
 <html lang="en-us">
 
     <head>
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta charset="UTF-8">
-      <title> Area of Growth</title>
-      <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <title>AOG Medical</title>
+      <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+      <link rel="stylesheet" type="text/css" href="assets/css/map.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
       <!-- <script src="assets/javascript/app.js"></script> -->
     </head>
 
-<body style="background-color:black">
+<body>
 
 <!--Container1 Starts Here-->
     <div class="container1">
@@ -34,8 +34,8 @@
       </a>
 <!--Search Starts Here-->
           <form class="form-inline" action="#/action_page.php">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+            <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+            <button class="btn btn-success my-2 my-sm-0" id= "search" type="submit">Search</button>
           </form>
 <!--Search Ends Here-->
 <!--Drop Down Button Starts-->
@@ -50,6 +50,8 @@
                 <li><a href="/maps.html">Location & Reviews</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Contact Us</a></li>
+
+
               </ul>
       </div>
 <!--drop Down Button Ends-->
@@ -61,56 +63,36 @@
 
 
 <!--Card Containter2 Starts Here-->
-    <div class="container2" id="containerCards">
+    <div class="container2">
+        <!--Start of Row 1-->
+        <div class="row">
+        
 <!--Side Nav Bar Starts Here-->
         <div class="sidenav">
-<!-- <a href="#Strains">Types of Strains</a> -->
-              <form>
-                <div class="form-group" style="color:black; font-weight: bold">
-                  <label for="formGroupExampleInput">Type of Strians</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
-                    placeholder="Enter Strain">
-                </div>
-              </form>
-<!-- <a href="#Effects">Desired Effects</a> -->
-              <form>
-                <div class="form-group" style="color:black; font-weight: bold">
-                  <label for="formGroupExampleInput">Type of Effects</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
-                    placeholder="Enter Desired Effects">
-                </div>
-              </form>
-<!-- <a href="#Flavors">Types of Flavors</a> -->
-              <form>
-                <div class="form-group" style="color:black; font-weight: bold">
-                  <label for="formGroupExampleInput">Different Flavors</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
-                    placeholder="Enter Desired Flavor">
-                </div>
-                <br>
-                <br>
-                <br>
-              </form>
-              <a href="/medical.html">Medical Info</a>
-              <a href="/maps.html">Store Locations & Info</a>
-      </div>
-<!--Side Nav Bar Ends Here-->        
+<!--Show Marker Click Results-->
+            <div id="panel"
+                ><img class="hero" src="https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sCmRaAAAAXoQckoKMkouu39lSe3LsyOd-4TBLZx0wBFGfbfk0KmcZoTmFrRcarjmn8W5qqaD9-QG_K0ugIGdiWj1Wwpb3mFpAnskH4i1e_g84kayMZrT5u4icvFEXecuiz6FkADoYEhCn9Gdz_MeLT3--dvLO5dw2GhSVWRR0gKmecolLSytA8jNd6w0oCg&amp;3u2816&amp;5m1&amp;2e1&amp;callback=none&amp;key=AIzaSyC5n0NTpCtKxrq_LsWSmOxbjtR1PjwSWHY&amp;token=3165">
+                <h1 class="place">Evergreen Market - Auburn</h1>
+                <p class="details">Rating: 4.4 ✮</p>
+                <p class="details">402 16th St NE A-100, Auburn, WA 98002, USA</p>
+                <p class="tit"><a title="https://www.theevergreenmarket.com/auburn-recreational/" href="https://www.theevergreenmarket.com/auburn-recreational/">https://www.theevergreenmarket.com/auburn-recreational/</a>
+                </p></div>
 
+      </div>
+<!--Side Nav Bar Ends Here--> 
+        </div>
+        <!--End of Row 1-->
+        
+        <!--Begainning of Row2-->
+        <div class="row">
 <!--Main Page Info Starts Here-->   
     <div class="main">
-<!--Respone for Map Info Start Here-->
-        <!-- <div class="col-sm-auto" id="strainInfo"> -->
-          <div class="card text-dark card bg-light mb-3" style="max-width: 100%;">
-            <div class="card-body">
-              <h5 class="card-title" style="color:black; font-weight: bold">Strains that Meet Your Criteria</h5>
-              <p class="card-text">Maps Here</p>
-                <!-- Map appears here -->
-                <div id="map"></div>
-            </div>
-          </div>
-<!--Respone for Map Info Ends Here-->
-  </div>
+        <div id="map"></div>
+    </div>
+<!--End of Row2-->  
+</div>  
 <!--Card Containter2 End Here-->
+</div>
 
 
 <!--Nav Bar Bottom Starts Here-->
@@ -119,19 +101,20 @@
     </nav>
 <!--Nav Bar Bottom Ends Here-->
 
- 
 
-        <!-- Optional JavaScript -->
-    <!--JavaScript Link-->
-    <script src="assets/javascript/maps.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="assets/javascript/maps.js"></script>
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5n0NTpCtKxrq_LsWSmOxbjtR1PjwSWHY&libraries=places&callback=initMap" type="text/javascript"></script> 
+<!--JavaScript Link-->
+<!-- <script src="app.js"></script> -->
+    <!--BootStrap Link-->
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  -->
-    <!-- <script async defer 
-    src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyC5n0NTpCtKxrq_LsWSmOxbjtR1PjwSWHY&libraries=places&callback=initMap">
-    </script> -->
+
     
 
 
