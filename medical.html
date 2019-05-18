@@ -1,127 +1,198 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta charset="UTF-8">
-      <title>AOG Medical</title>
-      <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <!-- <script src="assets/javascript/app.js"></script> -->
-    </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <title>AOG Medical</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <script src="assets/javascript/app.js"></script> -->
+</head>
 
 <body style="background-color:black">
 
-<!--Container1 Starts Here-->
-    <div class="container1">
-<!--Jumbotron Starts Here-->
-      <div class="jumbotron jumbotron-fluid" id="title" style="margin-bottom:0rem; background-color:black">
-        <div class="container">
-          <h1 class="display-4"></h1>
-          <p class="lead"></p>
-        </div>
+  <!--Container1 Starts Here-->
+  <div class="container1">
+    <!--Jumbotron Starts Here-->
+    <div class="jumbotron jumbotron-fluid" id="title" style="margin-bottom:0rem; background-color:black">
+      <div class="container">
+        <h1 class="display-4"></h1>
+        <p class="lead"></p>
       </div>
-<!--Jumbotron Ends Here-->
-<!--NavBar Starts Here-->
-        <nav class="navbar navbar-dark bg-dark justify-content-between">
-<!-- Brand -->
+    </div>
+    <!--Jumbotron Ends Here-->
+    <!--NavBar Starts Here-->
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+      <!-- Brand -->
       <a class="navbar-brand" href="#">
-        <img src="..//Project1/assets/image/weedleafSmall.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="..//Project1/assets/image/weedleafSmall.png" width="30" height="30" class="d-inline-block align-top"
+          alt="">
       </a>
-<!--Search Starts Here-->
-          <form class="form-inline" action="#/action_page.php">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-<!--Search Ends Here-->
-<!--Drop Down Button Starts-->
+      <!--Search Starts Here-->
+      <form class="form-inline" action="#/action_page.php">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <!--Search Ends Here-->
+      <!--Drop Down Button Starts-->
       <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-              <i class="fa fa-bars"></i>
-            </button>
-              <ul class="dropdown-menu dropdown-menu-right">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#">Strains, Effects, & Flavors</a></li>
-                <li><a href="/medical.html">Medical Information</a></li>
-                <li><a href="/maps.html">Location & Reviews</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-bars"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#">Strains, Effects, & Flavors</a></li>
+          <li><a href="/medical.html">Education</a></li>
+          <li><a href="/maps.html">Location & Reviews</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
       </div>
-<!--drop Down Button Ends-->
-        </nav>
-<!--End of Nav Bar-->
-      </div>
-<!--Container1 Ends Here-->
-
-
-
-<!--Card Containter2 Starts Here-->
-    <div class="container2" id="containerCards">
-<!--Side Nav Bar Starts Here-->
-        <div class="sidenav">
-<!-- <a href="#Strains">Types of Strains</a> -->
-              <form>
-                <div class="form-group" style="color:black; font-weight: bold">
-                  <label for="formGroupExampleInput">Type of Strians</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
-                    placeholder="Enter Strain">
-                </div>
-              </form>
-<!-- <a href="#Effects">Desired Effects</a> -->
-              <form>
-                <div class="form-group" style="color:black; font-weight: bold">
-                  <label for="formGroupExampleInput">Type of Effects</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
-                    placeholder="Enter Desired Effects">
-                </div>
-              </form>
-<!-- <a href="#Flavors">Types of Flavors</a> -->
-              <form>
-                <div class="form-group" style="color:black; font-weight: bold">
-                  <label for="formGroupExampleInput">Different Flavors</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
-                    placeholder="Enter Desired Flavor">
-                </div>
-                <br>
-                <br>
-                <br>
-              </form>
-              <a href="/medical.html">Medical Info</a>
-              <a href="/maps.html">Store Locations & Info</a>
-      </div>
-<!--Side Nav Bar Ends Here-->        
-
-<!--Main Page Info Starts Here-->   
-    <div class="main">
-
+      <!--drop Down Button Ends-->
+    </nav>
+    <!--End of Nav Bar-->
   </div>
-<!--Card Containter2 End Here-->
+  <!--Container1 Ends Here-->
 
 
-<!--Nav Bar Bottom Starts Here-->
+
+  <!--Card Containter2 Starts Here-->
+  <div class="container2" id="containerCards">
+    <!--Side Nav Bar Starts Here-->
+    <div class="sidenav">
+      <!-- <a href="#Strains">Types of Strains</a> -->
+      <form>
+        <div class="form-group" style="color:black; font-weight: bold">
+          <label for="formGroupExampleInput">Type of Strains</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
+            placeholder="Enter Strain">
+        </div>
+      </form>
+      <!-- <a href="#Effects">Desired Effects</a> -->
+      <form>
+        <div class="form-group" style="color:black; font-weight: bold">
+          <label for="formGroupExampleInput">Type of Effects</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
+            placeholder="Enter Desired Effects">
+        </div>
+      </form>
+      <!-- <a href="#Flavors">Types of Flavors</a> -->
+      <form>
+        <div class="form-group" style="color:black; font-weight: bold">
+          <label for="formGroupExampleInput">Different Flavors</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
+            placeholder="Enter Desired Flavor">
+        </div>
+        <br>
+        <br>
+        <br>
+      </form>
+      <a href="/medical.html">Educational Info</a>
+      <a href="/maps.html">Store Locations & Info</a>
+    </div>
+    <!--Side Nav Bar Ends Here-->
+
+    <!--Main Page Info Starts Here-->
+    <div class="main">
+      <h1 id="education">Educational Information</h1>
+      <p id="main-paragraph">The most daunting task in beginning cannabis treatment is the lack of information available
+        to guide new users into choosing the correct methods to treat the symptoms of disease. This page is meant to
+        serve as a guide to your treatment, not to override your physician or care provider's professional expertise.
+      </p>
+      <div class="button-group">
+        <button id="difference-button">What is the difference between THC & CBD?</button>
+        <button id="effects-button">Health Effects</button>
+        <button id="product-button">Search for the right product for you</button>
+      </div>
+
+      <div id="diff-section">
+        <p>CBD and THC have the exact same chemical makeup: 21 carbon atoms, 30 hydrogen atoms, and 2 oxygen atoms. What
+          differentiates the two compounds, however, is the arrangement of a single atom, which you can observe in the
+          illustration below.</p>
+
+        <img src="assets\image\cannabidiol.png" id="atoms" width="500" height="300" alt="thc and cbd atoms">
+
+        <p>A cannabinoid is a compound that interacts directly with our body’s Endocannabinoid System (ECS), which in
+          short, is a network of receptors that interact with cannabinoids to maintain vital functions throughout our
+          body. CB1 receptors are found abundantly in regions of the brain responsible for mental and physiological
+          processes such as memory, high cognition, emotion, and motor coordination, while CB2 receptors are found
+          throughout the central nervous and immune systems. The interaction between the CB1 and CB2 receptors with
+          cannabinoids like CBD and THC is the catalyst for health benefits such as pain relief, anxiety relief,
+          appetite stimulation, mood management and more.</p>
+        <p>Because THC and CBD have different molecular structures, they do not interact with the CB1 and CB2 receptors
+          in the same manner. This greatly differentiates the effects each has on the body, which is likely the biggest
+          concern when comparing CBD to THC. While CBD and THC both bind to the CB2 receptor, they interact with the CB1
+          receptors in different ways. Because of its molecular structure, THC is able to bind directly with CB1
+          receptors. When this bond is formed, the reaction creates signals that are sent to the brain, which results in
+          the psychoactive effects of “getting high.” In stark contrast, research shows that CBD does not bond directly
+          with the CB1 receptor, and its presence can even negate the bond between THC and the CB1 receptors,
+          effectively neutralizing the psychoactive effects induced by THC. While THC certainly offers tremendous health
+          benefits, its mind-altering effects aren’t preferred by everyone. CBD, on the other hand, can deliver many of
+          the same benefits of THC without inducing its psychoactive effects. </p>
+      </div>
+
+      <div id="effects-section">
+        <img src="assets\image\health-effects-of-marijuana.jpg" id="effects-img" width="700" height="500"
+          alt="health effects chart">
+      </div>
+
+      <div id="product-section">
+        <p id="product-paragraph">To help guide you in the process of selecting the correct product for you, refer to
+          the chart below.</p>
+
+        <img src="assets/image/cbd-thc-ratio.png" id="ratio-chart" width="700" height="500" alt="cbd-thc ratio chart">
+
+        <div id="button-group">
+          <button class="high-pa">High/Psychoactive</button>
+          <button class="high-pa-relax">High/Psychoactive/Relax</button>
+          <button class="high-relax-killcc">High/Relax/Kill Cancer Cells</button>
+          <button class="relax-killcc">Relax/Kill Cancer Cells</button>
+          <button class="relax-mood">Relax/Good Mood</button>
+          <button class="neuro">Neurological Issues</button>
+          <button class="auto-immune">Auto-Immune Conditions</button>
+
+        </div>
+
+        <div id="load-product"></div>
+      </div>
+
+    </div>
+    <!--Card Containter2 End Here-->
+
+
+    <!--Nav Bar Bottom Starts Here-->
     <nav class="navbar fixed-bottom navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Contact Us</a>
     </nav>
-<!--Nav Bar Bottom Ends Here-->
+    <!--Nav Bar Bottom Ends Here-->
 
- 
 
-        <!-- Optional JavaScript -->
-    <!--JavaScript Link-->
-    <script src="assets/javascript/app.js"></script>
+
+    <!-- Optional JavaScript -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <!--JavaScript Link-->
+    <script src="assets\javascript\medical-page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
     <!-- <script async defer 
     src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyC5n0NTpCtKxrq_LsWSmOxbjtR1PjwSWHY&callback=initMap">
     </script> -->
-    
+
 
 
 
