@@ -6,10 +6,11 @@
       <meta charset="UTF-8">
       <title> Area of Growth</title>
       <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
       <!-- <script src="assets/javascript/app.js"></script> -->
     </head>
 
@@ -45,7 +46,7 @@
               <ul class="dropdown-menu dropdown-menu-right">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="#">Strains, Effects, & Flavors</a></li>
-                <li><a href="/medical.html">Medical Information</a></li>
+                <li><a href="#">Medical Information</a></li>
                 <li><a href="/maps.html">Location & Reviews</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Contact Us</a></li>
@@ -57,8 +58,6 @@
       </div>
 <!--Container1 Ends Here-->
 
-
-
 <!--Card Containter2 Starts Here-->
     <div class="container2" id="containerCards">
 <!--Side Nav Bar Starts Here-->
@@ -67,7 +66,7 @@
               <form>
                 <div class="form-group" style="color:black; font-weight: bold">
                   <label for="formGroupExampleInput">Type of Strians</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
+                  <input type="text" class="form-control typeStrains" id="formGroupExampleInput" style="color:black; font-weight: bold"
                     placeholder="Enter Strain">
                 </div>
               </form>
@@ -75,7 +74,7 @@
               <form>
                 <div class="form-group" style="color:black; font-weight: bold">
                   <label for="formGroupExampleInput">Type of Effects</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
+                  <input type="text" class="form-control typeEffects" id="formGroupExampleInput" style="color:black; font-weight: bold"
                     placeholder="Enter Desired Effects">
                 </div>
               </form>
@@ -83,15 +82,19 @@
               <form>
                 <div class="form-group" style="color:black; font-weight: bold">
                   <label for="formGroupExampleInput">Different Flavors</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" style="color:black; font-weight: bold"
+                  <input type="text" class="form-control typeFlavor" id="formGroupExampleInput" style="color:black; font-weight: bold"
                     placeholder="Enter Desired Flavor">
                 </div>
+                <button class="btn btn-success my-2 my-sm-0 submit" type="button">Search</button>
                 <br>
                 <br>
+                <button class="btn btn-success my-2 my-sm-0 favorites" type="button">Your Favorites</button>
+
                 <br>
               </form>
-              <a href="/medical.html">Medical Info</a>
+              <a href="#Medical">Medical Info</a>
               <a href="/maps.html">Store Locations & Info</a>
+              <a href="#Yelp">Store Reviews</a>
       </div>
 <!--Side Nav Bar Ends Here-->        
 
@@ -102,18 +105,22 @@
           <div class="card text-dark card bg-light mb-3" style="max-width: 100%;">
             <div class="card-body">
               <h5 class="card-title" style="color:black; font-weight: bold">Strains that Meet Your Criteria</h5>
-              <p class="card-text">Option 1 Results Populate Here</p>
+              <button class="btn btn-success my-2 my-sm-0 clear">Clear Results</button>  
             </div>
           </div>
+
+          <div class="strains"></div>
 <!--Respones for Search Criteria Ends Here-->      
 <!--Respone for Map Info Start Here-->
         <!-- <div class="col-sm-auto" id="strainInfo"> -->
+          <!-- Duplicate
           <div class="card text-dark card bg-light mb-3" style="max-width: 100%;">
             <div class="card-body">
               <h5 class="card-title" style="color:black; font-weight: bold">Strains that Meet Your Criteria</h5>
               <p class="card-text">Option 1 Results Populate Here</p>
             </div>
           </div>
+        -->
     </div>
 <!--Respone for Map Info Ends Here-->
   </div>
@@ -130,15 +137,14 @@
 
         <!-- Optional JavaScript -->
     <!--JavaScript Link-->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/strainAPI.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  -->
-    <!-- <script async defer 
-    src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyC5n0NTpCtKxrq_LsWSmOxbjtR1PjwSWHY&callback=initMap">
-    </script> -->
+
     
 
 
