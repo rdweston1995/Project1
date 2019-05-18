@@ -1,9 +1,6 @@
 console.log("maps js page")
 
 
-console.log("maps js page")
-
-
 
 var map;
 var infoWindow;
