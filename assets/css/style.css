@@ -44,6 +44,83 @@ body {
     margin-bottom: 10px;
 }
 
+#education {
+    color: rgb(7, 105, 7);
+}
+
+#main-paragraph {
+    color: rgb(151, 150, 150);
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.button-group {
+    text-align: center;
+}
+
+button {
+    background-color:  rgb(7, 105, 7);
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    border: solid 1px gray
+}
+
+#effects-section {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#effects-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+#diff-section {
+    margin-top: 20px;
+    color: rgb(151, 150, 150);
+    font-size: 18px;
+    margin-bottom: 100px;
+
+}
+
+#atoms {
+    display: block;
+    margin: 20px auto 20px;
+
+}
+
+#ratio-chart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+#product-section {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    color: rgb(151, 150, 150);
+}
+
+#product-paragraph {
+    margin-bottom: 20px;
+}
+
+.pop-product {
+    display: block;
+    margin: auto;
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -52,6 +129,6 @@ body {
   /* Maps Page CSS */
   #map {
     height: 100%;
-    background-color: grey;
+    background-color: rgb(151, 150, 150);
 }
 
