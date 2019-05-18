@@ -1,6 +1,6 @@
-body {
-    background-color: black;
-}
+/* body {
+    background-color: palevioletred;
+} */
 
 #title {
     background-image: url(..//image/cooltext323903962671613.png), url(..//image/tumblr_mrjgort4sR1sc50pho1_500.gif), url(..//image/weed-leaf-wallpapers-9.jpg);
@@ -14,8 +14,8 @@ body {
 }
 
 .sidenav {
-    position: fixed;
-    width: 200px;
+    position: absolute;
+    width: 300px;
     height: 100%;
     z-index: 1;
     left: 0;
@@ -37,6 +37,7 @@ body {
 .main {
     font-size: 20px;
     margin: 10px 10px 10px 210px;
+    width: 89%;
 
 }
 
@@ -45,24 +46,23 @@ body {
     .sidenav a {font-size: 18px;}
   }
 
-  /* Maps Page CSS */
-  #map {
-    height: 100%;
-    width: 100%;
+#map {
     background-color: grey;
-  }
-
-  #panel {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+}
+/* 
+#panel {
     height: 100%;
-    width: 100%;
+    width: null;
     background-color: white;
-    position: fixed;
+    position: static;
     z-index: 1;
     overflow-x: hidden;
     transition: all .2s ease-out;
   }
   .open {
-    width: 150px;
+    width: 250px;
   }
   /* Styling for place details */
   .hero {
@@ -71,16 +71,42 @@ body {
     max-height: 166px;
     display: block;
   }
-  .place,
-  p {
+  .place {
     font-family: 'open sans', arial, sans-serif;
     padding-left: 18px;
     padding-right: 18px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
   }
   .details {
     color: darkslategrey;
+    text-align: center;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: center;
+
   }
   a {
     text-decoration: none;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: center;
     color: cadetblue;
-  }
+  } */
+
+  h1, h1 {
+    font-size: 1.5rem;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: center;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+
+
